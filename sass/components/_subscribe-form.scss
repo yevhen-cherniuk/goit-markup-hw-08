@@ -1,0 +1,75 @@
+.footer-subscribe {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+  margin-left: 93px;
+  width: 570px;
+  height: 86;
+}
+.subscribe-form {
+  display: flex;
+  flex-direction: row;
+}
+.mail-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 358px;
+  height: 50px;
+  margin-bottom: 40px;
+  padding-left: 16px;
+  font-family: $main-font, sans-serif;
+  font-style: normal;
+  @include fonts(400, 16px, 1.25, 0.03em);
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background: var(--dark-bg);
+
+  &::placeholder {
+    font-family: $main-font, sans-serif;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.btn-send {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 50px;
+  padding: 10px 29px;
+  margin-bottom: 40px;
+  font-family: $main-font, sans-serif;
+  font-style: 700;
+  @include fonts(bold, 16px, 1.87, 0.06em);
+  background-color: $accent-cl;
+  color: $white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+
+  &:hover .send-svg,
+  &:focus .send-svg {
+    fill: $accent-cl;
+    transition-duration: $time;
+    transition-timing-function: $timing-function;
+  }
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $accent-cl;
+    cursor: pointer;
+    transition-duration: $time;
+    transition-timing-function: $timing-function;
+  }
+}
+.send-svg {
+  margin-left: 10px;
+  fill: $white;
+}

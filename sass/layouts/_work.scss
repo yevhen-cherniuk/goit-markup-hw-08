@@ -1,0 +1,28 @@
+.img-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.img-item {
+  position: relative;
+  margin-left: 30px;
+  list-style: none;
+  flex-basis: calc(100% / 3 - 30px);
+  z-index: 1;
+}
+
+.img-discription {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  z-index: 2;
+}
+.title.centring {
+  text-align: center;
+  padding-top: 27px;
+  color: $white;
+}

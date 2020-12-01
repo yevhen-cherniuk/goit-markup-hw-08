@@ -1,0 +1,114 @@
+.menu-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+.btn-portfolio {
+  display: inline-block;
+  padding: 6px 22px;
+  margin-right: 8px;
+  border-radius: 4px;
+  font-style: normal;
+  @include fonts(500, 16px, 1.62, 0.03em);
+  color: $black;
+  cursor: pointer;
+  border: transparent;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $accent-cl;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition-duration: $time;
+    transition-timing-function: $timing-function;
+  }
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.list.block {
+  display: block;
+}
+.portfolio-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  height: 404px;
+  width: 370px;
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  background-color: $white;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-duration: $time;
+    transition-timing-function: $timing-function;
+  }
+
+  &:hover .item-discription,
+  &:focus .item-discription {
+    transform: translateY(0);
+    opacity: 1;
+    transition-duration: $time;
+    transition-timing-function: $timing-function;
+  }
+}
+
+.card-img {
+  position: relative;
+  display: block;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+.item-discription {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 370px;
+  height: 294px;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  font-family: $main-font, sans-serif;
+  font-style: normal;
+  @include fonts(400, 18px, 1.56, 0.03em);
+  color: $white;
+  opacity: 0;
+  transform: translateY(100%);
+  transition-duration: $time;
+  transition-timing-function: $timing-function;
+  transition-delay: 0;
+  z-index: 1;
+}
+
+.card-footer {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.portfolio-label {
+  text-align: start;
+  margin-bottom: 4px;
+  @include fonts(bold, 18px, 2, 0.06em);
+  color: $black;
+}
+.discription {
+  text-align: start;
+  @include fonts(normal, 16px, 1.87, 0.03em);
+  color: $main-text;
+}

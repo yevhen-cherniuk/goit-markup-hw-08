@@ -1,0 +1,117 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+.header-conteiner {
+  display: flex;
+  align-items: center;
+  justify-items: flex-end;
+}
+
+.header-logo {
+  font-family: $logo-font, sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  @include fonts(bold, 26px, 1.19, 0.03em);
+  color: $black;
+}
+.web-logo {
+  color: $accent-cl;
+}
+
+.navigation {
+  margin-left: 93px;
+}
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  & .link {
+    position: relative;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  & .menu-item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu-item .link {
+  display: block;
+  align-items: center;
+}
+.link {
+  font-style: normal;
+  text-decoration: none;
+  @include fonts(500, 14px, 1.14, 0.02em);
+  color: $black;
+
+  &:hover,
+  &:focus {
+    color: $accent-cl;
+    transition-duration: $time;
+    transition-timing-function: $timing-function;
+  }
+  &k:hover::after,
+  &:focus::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-cl;
+    bottom: 0;
+    transition-duration: $time;
+    transition-timing-function: $timing-function;
+  }
+}
+.current {
+  color: $accent-cl;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-cl;
+    bottom: 0;
+  }
+}
+
+.conect-nav {
+  margin-left: auto;
+
+  & .link + .link {
+    margin-left: 50px;
+  }
+  &.smartphone {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+.header-conect {
+  display: inline-block;
+  flex-direction: row;
+  justify-items: legacy;
+  color: $main-text;
+
+  &:hover,
+  &:focus {
+    color: $accent-cl;
+    transition-duration: $time;
+    transition-timing-function: $timing-function;
+  }
+}
+
+.header-svg {
+  margin-right: 10px;
+  fill: currentColor;
+}

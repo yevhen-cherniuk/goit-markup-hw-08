@@ -1,0 +1,39 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-title {
+  margin-bottom: 30px;
+  font-family: $main-font, sans-serif;
+  @include fonts(900, 44px, 1.36, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+}
+.btn {
+  display: inline-block;
+  outline: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  min-height: 50px;
+  text-align: center;
+
+  font-family: $main-font, sans-serif;
+  @include fonts(bold, 16px, 1.87, 0.06em);
+  text-decoration: none;
+  color: $white;
+  background-color: $accent-cl;
+}
