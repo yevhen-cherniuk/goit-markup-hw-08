@@ -1,15 +1,37 @@
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu-features {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .list-item {
+      width: calc((100% - 30px) / 2);
+      margin-bottom: 30px;
+    }
+
+    & .list-item:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+}
 .features {
-  padding-top: 94px;
+  @include for-size(desctop) {
+    padding-top: 94px;
+  }
 }
 .list-item {
   list-style: none;
 }
+
 .menu-features {
-  display: flex;
-  justify-content: space-between;
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 
   & .list-item {
-    width: calc((100% - 90px) / 4);
+    @include for-size(desktop) {
+      width: calc((100% - 90px) / 4);
+    }
   }
   & .list-item::before {
     content: '';

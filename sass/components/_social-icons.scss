@@ -1,9 +1,10 @@
 .social-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .social-icons-item {
   list-style: none;
+  margin-right: 10px;
 
   &:not(:last-child) {
     margin-right: 10px;

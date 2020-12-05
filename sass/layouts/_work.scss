@@ -1,3 +1,8 @@
+.section.work {
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
 .img-set {
   display: flex;
   flex-wrap: wrap;
