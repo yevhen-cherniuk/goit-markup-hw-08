@@ -195,22 +195,19 @@ ul {
 
 .footer-subscribe {
   justify-content: center;
-  padding-top: 60px;
-  height: 86;
 }
 
 @media (min-width: 768px) {
   .footer-subscribe {
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 @media (min-width: 1200px) {
   .footer-subscribe {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
+    display: block;
     padding-top: 15px;
     margin-left: 93px;
     width: 570px;
@@ -246,6 +243,7 @@ ul {
 
 @media (min-width: 768px) {
   .mail-input {
+    width: 450px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -253,9 +251,6 @@ ul {
 
 @media (min-width: 1200px) {
   .mail-input {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     width: 358px;
     margin-bottom: 40px;
   }
@@ -289,9 +284,6 @@ ul {
 
 @media (min-width: 1200px) {
   .btn-send {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     align-items: center;
     margin-bottom: 40px;
   }
@@ -1176,6 +1168,14 @@ ul {
   }
 }
 
+@media (min-width: 768px) {
+  .tablet-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+}
+
 @media (max-width: 767px) {
   .footer-nav {
     align-items: center;
@@ -1213,13 +1213,6 @@ ul {
   .footer-title {
     margin-right: auto;
     margin-left: auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .footer-title {
-    position: absolute;
-    left: 0;
   }
 }
 
@@ -1268,7 +1261,7 @@ ul {
   padding-top: 12px;
   margin-left: 70px;
   width: 206px;
-  height: 80;
+  height: 80px;
 }
 
 @media (max-width: 767px) {
@@ -1317,6 +1310,13 @@ ul {
   padding-bottom: 50px;
 }
 
+@media (max-width: 767px) {
+  .menu-filters {
+    flex-wrap: wrap;
+    padding-bottom: 35px;
+  }
+}
+
 .btn-portfolio {
   display: inline-block;
   padding: 6px 22px;
@@ -1332,12 +1332,27 @@ ul {
   border: transparent;
 }
 
+@media (max-width: 767px) {
+  .btn-portfolio {
+    margin-bottom: 15px;
+  }
+}
+
 .btn-portfolio:hover, .btn-portfolio:focus {
   color: #ffffff;
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1349,8 +1364,15 @@ ul {
   }
 }
 
-.list.block {
-  display: block;
+@media (min-width: 768px) {
+  .portfolio-list {
+    width: calc(100% / 2 - 30px);
+    margin-bottom: 30px;
+    margin-left: 30px;
+  }
+  .portfolio-list:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
 }
 
 .portfolio-item {

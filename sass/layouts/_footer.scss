@@ -15,6 +15,14 @@
     justify-content: space-between;
   }
 }
+@include for-size(tablet) {
+  .tablet-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+}
+
 .footer-nav {
   @include for-size(mobile-only) {
     align-items: center;
@@ -39,11 +47,6 @@
   @include for-size(tablet) {
     margin-right: auto;
     margin-left: auto;
-  }
-
-  @include for-size(desktop) {
-    position: absolute;
-    left: 0;
   }
 }
 .footer-logo {
@@ -86,7 +89,7 @@
   padding-top: 12px;
   margin-left: 70px;
   width: 206px;
-  height: 80;
+  height: 80px;
   @include for-size(mobile-only) {
     margin-left: auto;
     margin-right: auto;

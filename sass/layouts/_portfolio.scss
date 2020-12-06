@@ -3,6 +3,10 @@
   flex-direction: row;
   justify-content: center;
   padding-bottom: 50px;
+  @include for-size(mobile-only) {
+    flex-wrap: wrap;
+    padding-bottom: 35px;
+  }
 }
 .btn-portfolio {
   display: inline-block;
@@ -14,6 +18,9 @@
   color: $black;
   cursor: pointer;
   border: transparent;
+  @include for-size(mobile-only) {
+    margin-bottom: 15px;
+  }
 
   &:hover,
   &:focus {
@@ -25,6 +32,13 @@
   }
 }
 .portfolio {
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+
   @include for-size(desktop) {
     display: flex;
     flex-wrap: wrap;
@@ -32,9 +46,19 @@
     margin-left: -30px;
   }
 }
-.list.block {
-  display: block;
+.portfolio-list {
+  @include for-size(tablet) {
+    width: calc(100% / 2 - 30px);
+    margin-bottom: 30px;
+    margin-left: 30px;
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
+  }
 }
+// .list.block {
+//   display: block;
+// }
 .portfolio-item {
   position: relative;
   display: block;
