@@ -46,6 +46,7 @@
   // }
 }
 .portfolio-list {
+  position: relative;
   width: 370px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -95,6 +96,9 @@
   overflow: hidden;
 }
 .item-discription {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 370px;
   height: 294px;
   padding: 63px 24px;
