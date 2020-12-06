@@ -11,10 +11,11 @@
   @include for-size(mobile-only) {
     width: 100%;
     max-width: 450px;
+    max-height: 468px;
     margin-bottom: 30px;
   }
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -28,6 +29,9 @@
       width: calc(100% / 2 - 30px);
       margin-bottom: 30px;
       margin-left: 30px;
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0px;
+      }
     }
   }
 }

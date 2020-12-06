@@ -4,12 +4,20 @@
   background-color: $dark-bg;
 }
 .footer-conteiner {
-  display: flex;
-  justify-content: space-between;
+  @include for-size(mobile-only) {
+    text-align: center;
+  }
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer-nav {
+  @include for-size(mobile-only) {
+    align-items: center;
+  }
 }
 .footer-title {
-  position: absolute;
-  left: 0;
   margin-bottom: 20px;
   display: inline-block;
   font-family: $main-font, sans-serif;
@@ -17,6 +25,14 @@
   @include fonts(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: #ffffff;
+  @include for-size(mobile-only) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @include for-size(desktop) {
+    position: absolute;
+    left: 0;
+  }
 }
 .footer-logo {
   font-family: $logo-font;
@@ -30,6 +46,7 @@
 .footer-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -58,6 +75,12 @@
   margin-left: 70px;
   width: 206px;
   height: 80;
+  @include for-size(mobile-only) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 .footer-list.social-icons {
   position: absolute;

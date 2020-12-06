@@ -194,27 +194,34 @@ ul {
 }
 
 .footer-subscribe {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 15px;
-  margin-left: 93px;
-  width: 570px;
+  justify-content: center;
+  padding-top: 60px;
   height: 86;
 }
 
-.subscribe-form {
-  display: flex;
-  flex-direction: row;
+@media (min-width: 1200px) {
+  .footer-subscribe {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding-top: 15px;
+    margin-left: 93px;
+    width: 570px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .subscribe-form {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .mail-input {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 358px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-left: 16px;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -230,6 +237,16 @@ ul {
   background: var(--dark-bg);
 }
 
+@media (min-width: 1200px) {
+  .mail-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 358px;
+    margin-bottom: 40px;
+  }
+}
+
 .mail-input::placeholder {
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -237,15 +254,12 @@ ul {
 }
 
 .btn-send {
-  position: absolute;
   display: flex;
-  align-items: center;
-  bottom: 0;
-  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 200px;
   height: 50px;
   padding: 10px 29px;
-  margin-bottom: 40px;
   font-family: Roboto, sans-serif;
   font-style: 700;
   font-weight: bold;
@@ -257,6 +271,16 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: transparent;
+}
+
+@media (min-width: 1200px) {
+  .btn-send {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    margin-bottom: 40px;
+  }
 }
 
 .btn-send:hover .send-svg,
@@ -833,12 +857,13 @@ ul {
   .team-item {
     width: 100%;
     max-width: 450px;
+    max-height: 468px;
     margin-bottom: 30px;
   }
 }
 
 .team-item:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -854,6 +879,9 @@ ul {
     width: calc(100% / 2 - 30px);
     margin-bottom: 30px;
     margin-left: 30px;
+  }
+  .team-item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
   }
 }
 
@@ -902,21 +930,47 @@ ul {
 .logo-set {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   margin-left: -30px;
+}
+
+@media (min-width: 1200px) {
+  .logo-set {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 
 .client-link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 90px;
   margin-left: 30px;
-  flex-basis: calc(100% / 6 - 30px);
+  margin-bottom: 30px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+  .client-link {
+    min-width: 210px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media (min-width: 768px) {
+  .client-link {
+    width: 226px;
+    flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .client-link {
+    width: 170px;
+    flex-basis: calc(100% / 6 - 30px);
+  }
 }
 
 .client-link:hover, .client-link:focus {
@@ -942,14 +996,26 @@ ul {
   background-color: #2f303a;
 }
 
-.footer-conteiner {
-  display: flex;
-  justify-content: space-between;
+@media (max-width: 767px) {
+  .footer-conteiner {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-conteiner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-nav {
+    align-items: center;
+  }
 }
 
 .footer-title {
-  position: absolute;
-  left: 0;
   margin-bottom: 20px;
   display: inline-block;
   font-family: Roboto, sans-serif;
@@ -960,6 +1026,20 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .footer-title {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-title {
+    position: absolute;
+    left: 0;
+  }
 }
 
 .footer-logo {
@@ -975,6 +1055,7 @@ ul {
 .footer-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -1007,6 +1088,15 @@ ul {
   margin-left: 70px;
   width: 206px;
   height: 80;
+}
+
+@media (max-width: 767px) {
+  .footer-social-links {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
 .footer-list.social-icons {

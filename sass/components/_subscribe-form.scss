@@ -1,23 +1,29 @@
 .footer-subscribe {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 15px;
-  margin-left: 93px;
-  width: 570px;
+  justify-content: center;
+  padding-top: 60px;
+
   height: 86;
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding-top: 15px;
+    margin-left: 93px;
+    width: 570px;
+  }
 }
 .subscribe-form {
-  display: flex;
-  flex-direction: row;
+  @include for-size(desktop) {
+    display: flex;
+    flex-direction: row;
+    // flex-direction: column;
+  }
 }
 .mail-input {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 358px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-left: 16px;
   font-family: $main-font, sans-serif;
   font-style: normal;
@@ -28,6 +34,13 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: var(--dark-bg);
+  @include for-size(desktop) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 358px;
+    margin-bottom: 40px;
+  }
 
   &::placeholder {
     font-family: $main-font, sans-serif;
@@ -36,15 +49,13 @@
   }
 }
 .btn-send {
-  position: absolute;
   display: flex;
-  align-items: center;
-  bottom: 0;
-  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 200px;
   height: 50px;
   padding: 10px 29px;
-  margin-bottom: 40px;
+
   font-family: $main-font, sans-serif;
   font-style: 700;
   @include fonts(bold, 16px, 1.87, 0.06em);
@@ -53,6 +64,13 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: transparent;
+  @include for-size(desktop) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    margin-bottom: 40px;
+  }
 
   &:hover .send-svg,
   &:focus .send-svg {
