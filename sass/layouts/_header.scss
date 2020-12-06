@@ -67,6 +67,8 @@
   @include for-size(mobile-only) {
     display: block;
     margin-left: auto;
+    background-color: white;
+    outline: transparent;
   }
 }
 
