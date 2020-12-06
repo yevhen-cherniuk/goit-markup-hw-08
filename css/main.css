@@ -1350,28 +1350,31 @@ ul {
   .portfolio {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
+    margin: -15px;
   }
 }
 
-@media (min-width: 1200px) {
-  .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
-  }
+.portfolio-list {
+  width: 370px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.portfolio-list:last-child {
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
   .portfolio-list {
     width: calc(100% / 2 - 30px);
-    margin-bottom: 30px;
-    margin-left: 30px;
+    width: 354px;
+    margin: 15px;
   }
-  .portfolio-list:nth-last-child(-n + 2) {
-    margin-bottom: 0px;
+}
+
+@media (min-width: 1200px) {
+  .portfolio-list {
+    width: 370px;
   }
 }
 
@@ -1379,10 +1382,6 @@ ul {
   position: relative;
   display: block;
   text-decoration: none;
-  height: 404px;
-  width: 370px;
-  margin-top: 30px;
-  margin-left: 30px;
   border: 1px solid #eeeeee;
   overflow: hidden;
   background-color: #ffffff;
@@ -1411,10 +1410,6 @@ ul {
 }
 
 .item-discription {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   width: 370px;
   height: 294px;
   padding: 63px 24px;
@@ -1435,11 +1430,7 @@ ul {
 }
 
 .card-footer {
-  position: absolute;
   display: block;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 20px 24px;
   box-sizing: border-box;
   z-index: 3;
