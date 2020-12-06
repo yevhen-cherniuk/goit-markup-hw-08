@@ -7,6 +7,9 @@
   @include for-size(mobile-only) {
     text-align: center;
   }
+  @include for-size(tablet) {
+    justify-content: space-between;
+  }
   @include for-size(desktop) {
     display: flex;
     justify-content: space-between;
@@ -15,6 +18,10 @@
 .footer-nav {
   @include for-size(mobile-only) {
     align-items: center;
+  }
+  @include for-size(tablet) {
+    display: inline-block;
+    justify-items: space-between;
   }
 }
 .footer-title {
@@ -29,6 +36,11 @@
     margin-right: auto;
     margin-left: auto;
   }
+  @include for-size(tablet) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   @include for-size(desktop) {
     position: absolute;
     left: 0;
