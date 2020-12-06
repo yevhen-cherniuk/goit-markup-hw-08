@@ -6,18 +6,18 @@
     position: absolute;
     left: 0;
     top: 100%;
-    background-color: wheat;
+    background-color: $white;
     flex-direction: column;
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
-    transition: 0.3s;
+    transition: 1.5s;
   }
 
   &.is-hidden {
     @include for-size(mobile-only) {
-      transform: translateY(-100%);
-      transition: 0.3s;
+      transform: translateY(-150%);
+      transition: 1.5s;
     }
   }
   display: flex;
@@ -104,7 +104,6 @@
   @include for-size(mobile-only) {
     padding: 0;
     margin-right: 0;
-    margin-bottom: 40px;
     text-align: center;
   }
   &:last-child {
