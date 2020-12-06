@@ -1,26 +1,42 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
+  @include for-size(desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .overlay {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include for-size(tablet) {
+    max-width: 768px;
+    height: 400px;
+  }
+  @include for-size(desktop) {
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 .hero-title {
   margin-bottom: 30px;
   font-family: $main-font, sans-serif;
-  @include fonts(900, 44px, 1.36, 0.06em);
+  @include fonts(900, 26px, 1.62, 0.06em);
   text-align: center;
   text-transform: uppercase;
   color: $white;
+
+  @include for-size(desktop) {
+    @include fonts(900, 44px, 1.36, 0.06em);
+  }
 }
 .btn {
   display: inline-block;
