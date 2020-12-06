@@ -1,13 +1,30 @@
 .page-header {
   border-bottom: 1px solid #ececec;
 }
+.mobile-header {
+  @include for-size(tablet) {
+    display: none;
+  }
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
 .header-conteiner {
+  @include for-size(mobile-only) {
+    display: none;
+  }
   display: flex;
   align-items: center;
   justify-items: flex-end;
 }
 
 .header-logo {
+  @include for-size(mobile-only) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include fonts(bold, 24px, 1.19, 0.03em);
+  }
   font-family: $logo-font, sans-serif;
   text-decoration: none;
   font-style: normal;
@@ -22,6 +39,9 @@
   margin-left: 93px;
 }
 .menu {
+  @include for-size(tablet) {
+    margin-right: 40px;
+  }
   display: flex;
   padding: 0;
   margin: 0;
@@ -42,8 +62,10 @@
 }
 
 .menu-item .link {
-  display: block;
-  align-items: center;
+  @include for-size(desktop) {
+    display: block;
+    align-items: center;
+  }
 }
 .link {
   font-style: normal;
@@ -57,7 +79,7 @@
     transition-duration: $time;
     transition-timing-function: $timing-function;
   }
-  &k:hover::after,
+  &:hover::after,
   &:focus::after {
     display: block;
     position: absolute;
@@ -89,12 +111,21 @@
 .conect-nav {
   margin-left: auto;
 
-  & .link + .link {
-    margin-left: 50px;
-  }
-  &.smartphone {
-    margin-top: 32px;
-    margin-bottom: 32px;
+  // & .link + .link {
+  //   margin-left: 50px;
+  // }
+  // &.smartphone {
+  //   margin-top: 32px;
+  //   margin-bottom: 32px;
+  // }
+  @include for-size(desktop) {
+    & .link + .link {
+      margin-left: 50px;
+    }
+    &.smartphone {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
   }
 }
 .header-conect {
