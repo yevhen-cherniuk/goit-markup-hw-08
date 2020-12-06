@@ -2,17 +2,34 @@
   border-bottom: 1px solid #ececec;
 }
 .mobile-header {
-  @include for-size(tablet) {
-    display: none;
+  @include for-size(mobile-only) {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: wheat;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    transition: 0.3s;
+  }
+
+  &.is-hidden {
+    @include for-size(mobile-only) {
+      transform: translateY(-100%);
+      transition: 0.3s;
+    }
   }
   display: flex;
-
   align-items: center;
   justify-content: space-between;
+  @include for-size(desktop) {
+    width: 100%;
+  }
 }
 .header-conteiner {
   @include for-size(mobile-only) {
-    display: none;
+    position: relative;
   }
   display: flex;
   align-items: center;
@@ -34,14 +51,39 @@
 .web-logo {
   color: $accent-cl;
 }
+.btn-close {
+  &.is-hidden {
+    display: none;
+  }
+}
+.btn-open {
+  &.is-hidden {
+    display: none;
+  }
+}
+.mobile-menu-btn {
+  display: none;
+
+  @include for-size(mobile-only) {
+    display: block;
+    margin-left: auto;
+  }
+}
 
 .navigation {
-  margin-left: 93px;
+  @include for-size(tablet) {
+    margin-left: 93px;
+  }
 }
 .menu {
+  @include for-size(mobile-only) {
+    margin-bottom: 60px;
+    flex-direction: column;
+  }
   @include for-size(tablet) {
     margin-right: 40px;
   }
+
   display: flex;
   padding: 0;
   margin: 0;
@@ -51,14 +93,31 @@
     display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-  & .menu-item:not(:last-child) {
-    margin-right: 50px;
+    @include for-size(mobile-only) {
+      padding: 0;
+    }
   }
 }
 
 .menu-item {
   list-style: none;
+  @include for-size(mobile-only) {
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  &:last-child {
+    @include for-size(mobile-only) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &:not(:last-child) {
+    @include for-size(tablet) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .menu-item .link {
@@ -109,7 +168,15 @@
 }
 
 .conect-nav {
-  margin-left: auto;
+  @include for-size(mobile-only) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include for-size(tablet) {
+    margin-left: auto;
+  }
+  // @include for-size(desktop) {
+  //}
 
   // & .link + .link {
   //   margin-left: 50px;
@@ -133,6 +200,11 @@
   flex-direction: row;
   justify-items: legacy;
   color: $main-text;
+  &:first-child {
+    @include for-size(mobile-only) {
+      margin-bottom: 16px;
+    }
+  }
 
   &:hover,
   &:focus {

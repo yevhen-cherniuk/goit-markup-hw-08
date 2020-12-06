@@ -645,9 +645,30 @@ ul {
   justify-content: space-between;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .mobile-header {
-    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: wheat;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-header.is-hidden {
+    transform: translateY(-100%);
+    transition: 0.3s;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mobile-header {
+    width: 100%;
   }
 }
 
@@ -659,7 +680,7 @@ ul {
 
 @media (max-width: 767px) {
   .header-conteiner {
-    display: none;
+    position: relative;
   }
 }
 
@@ -689,14 +710,42 @@ ul {
   color: #2196f3;
 }
 
-.navigation {
-  margin-left: 93px;
+.btn-close.is-hidden {
+  display: none;
+}
+
+.btn-open.is-hidden {
+  display: none;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-menu-btn {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation {
+    margin-left: 93px;
+  }
 }
 
 .menu {
   display: flex;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    margin-bottom: 60px;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 768px) {
@@ -712,12 +761,35 @@ ul {
   padding-bottom: 32px;
 }
 
-.menu .menu-item:not(:last-child) {
-  margin-right: 50px;
+@media (max-width: 767px) {
+  .menu .link {
+    padding: 0;
+  }
 }
 
 .menu-item {
   list-style: none;
+}
+
+@media (max-width: 767px) {
+  .menu-item {
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-item:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -771,8 +843,17 @@ ul {
   bottom: 0;
 }
 
-.conect-nav {
-  margin-left: auto;
+@media (max-width: 767px) {
+  .conect-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .conect-nav {
+    margin-left: auto;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -790,6 +871,12 @@ ul {
   flex-direction: row;
   justify-items: legacy;
   color: #757575;
+}
+
+@media (max-width: 767px) {
+  .header-conect:first-child {
+    margin-bottom: 16px;
+  }
 }
 
 .header-conect:hover, .header-conect:focus {
