@@ -68,7 +68,7 @@
     display: block;
     margin-left: auto;
     background-color: white;
-    outline: transparent;
+    border: transparent;
   }
 }
 
@@ -100,7 +100,13 @@
     }
   }
 }
-
+.menu .link {
+  &:not(:last-child) {
+    @include for-size(mobile-only) {
+      margin-bottom: 40px;
+    }
+  }
+}
 .menu-item {
   list-style: none;
   @include for-size(mobile-only) {

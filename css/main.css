@@ -727,7 +727,7 @@ ul {
     display: block;
     margin-left: auto;
     background-color: white;
-    outline: transparent;
+    border: transparent;
   }
 }
 
@@ -766,6 +766,12 @@ ul {
 @media (max-width: 767px) {
   .menu .link {
     padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu .link:not(:last-child) {
+    margin-bottom: 40px;
   }
 }
 
@@ -1409,6 +1415,7 @@ ul {
 @media (max-width: 767px) {
   .menu-filters {
     flex-wrap: wrap;
+    justify-content: end;
     padding-bottom: 35px;
   }
 }
