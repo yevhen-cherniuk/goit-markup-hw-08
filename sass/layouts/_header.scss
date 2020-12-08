@@ -103,6 +103,7 @@
 .menu .link {
   @include for-size(mobile-only) {
     margin-bottom: 40px;
+    padding-bottom: 8px;
   }
 }
 .menu-item {
