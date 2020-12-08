@@ -15,11 +15,17 @@
     justify-content: space-between;
   }
 }
-@include for-size(tablet) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .tablet-footer {
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
+  }
+}
+@include for-size(desktop) {
+  .tablet-footer {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

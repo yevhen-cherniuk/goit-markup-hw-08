@@ -1,6 +1,7 @@
 .section.work {
   @include for-size(desktop) {
     display: flex;
+    padding-top: 0px;
   }
 }
 .img-set {
