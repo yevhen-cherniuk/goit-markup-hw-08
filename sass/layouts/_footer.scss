@@ -18,7 +18,7 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .tablet-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 60px;
   }
 }
@@ -33,9 +33,10 @@
   @include for-size(mobile-only) {
     align-items: center;
   }
-  @include for-size(tablet) {
+  @media screen and(min-width: 768px) and(max-width: 1199px) {
     display: inline-block;
-    justify-items: space-between;
+    text-align: center;
+    // justify-items: space-between;
   }
 }
 .footer-title {
