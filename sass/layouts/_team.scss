@@ -11,7 +11,7 @@
   @include for-size(mobile-only) {
     width: 100%;
     max-width: 450px;
-    max-height: 468px;
+    height: auto;
     margin-bottom: 30px;
   }
   &:last-child {
