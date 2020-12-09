@@ -8,23 +8,38 @@
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 1;
   visibility: visible;
-  transition: 2s cubic-bezier(0.4, 0, 0.2, 1);
+  // transition: 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.3s;
+
   z-index: 3;
 
   &.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    transition: 0.3s;
+
+    & .modal {
+      transform: scale(0.3);
+      transition: 0.3s;
+      opacity: 0;
+    }
   }
 }
-.is-hidden.modal {
-  transform: translate(-50%, 0) 2s, scale(0.5) 2s;
-}
+// .is-hidden.modal {
+//   // transition: translate(-50%, 0) 2s, scale(0.5) 2s;
+//   transform: scale(0.3);
+//   transition: 0.3s;
+//   opacity: 0;
+// }
 .modal {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  transform: scale(1);
+  margin: 0 auto;
+  margin-top: 50px;
   width: 450px;
   height: 609px;
   display: block;
@@ -32,7 +47,9 @@
   background-color: #ffffff;
   stroke: 1px Solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s scale(1) 2s;
+  // transition: transform 0.5s scale(1) 2s;
+  opacity: 1;
+  transition: 0.3s;
   z-index: 4;
   @include for-size(desktop) {
     width: 528px;
