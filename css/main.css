@@ -657,6 +657,7 @@ ul {
     padding-top: 60px;
     padding-bottom: 60px;
     transition: 1.5s;
+    z-index: 1;
   }
 }
 
