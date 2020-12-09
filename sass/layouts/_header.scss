@@ -70,6 +70,19 @@
     margin-left: auto;
     background-color: white;
     border: transparent;
+
+    &:hover .btn-close,
+    &:focus .btn-close {
+      fill: $accent-cl;
+      transition-duration: $time;
+      transition-timing-function: $timing-function;
+    }
+    &:hover .btn-open,
+    &:focus .btn-open {
+      fill: $accent-cl;
+      transition-duration: $time;
+      transition-timing-function: $timing-function;
+    }
   }
 }
 

@@ -61,7 +61,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid tomato;
 }
 
 h1,
@@ -734,6 +733,18 @@ ul {
     margin-left: auto;
     background-color: white;
     border: transparent;
+  }
+  .mobile-menu-btn:hover .btn-close,
+  .mobile-menu-btn:focus .btn-close {
+    fill: #2196f3;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-menu-btn:hover .btn-open,
+  .mobile-menu-btn:focus .btn-open {
+    fill: #2196f3;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
