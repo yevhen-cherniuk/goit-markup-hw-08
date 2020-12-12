@@ -1,5 +1,6 @@
 .backdrop {
   position: fixed;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   right: 0;
@@ -39,9 +40,11 @@
   // transform: translate(-50%, -50%);
   transform: scale(1);
   margin: 0 auto;
-  margin-top: 50px;
-  width: 450px;
-  height: 609px;
+  padding: 25px;
+  width: 100%;
+
+  // margin-top: 50px;
+
   display: block;
   border-radius: 4px;
   background-color: #ffffff;
@@ -51,9 +54,11 @@
   opacity: 1;
   transition: 0.3s;
   z-index: 4;
+  @media screen and(min-width: 480px) and(max-width: 1199px) {
+    width: 450px;
+  }
   @include for-size(desktop) {
     width: 528px;
-    height: 581px;
   }
 }
 .close {
@@ -79,12 +84,7 @@
 }
 
 .modal-title {
-  position: absolute;
-  top: 60px;
-  left: 40px;
-  width: 100%;
-  width: 370px;
-  height: 60px;
+  margin-bottom: 30px;
   font-family: $main-font, sans-serif;
   font-style: normal;
   @include fonts(700, 20px, 23px, 0.03em);
@@ -92,16 +92,18 @@
   color: $black;
   z-index: 5;
   @include for-size(desktop) {
-    top: 60px;
-    width: 448px;
-    height: 23px;
   }
 }
 
 .modal-label {
-  position: absolute;
+  position: relative;
   display: block;
-  left: 40px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  &:last-child {
+    margin-bottom: 20px;
+  }
   font-family: $main-font, sans-serif;
   font-style: normal;
   @include fonts(400, 12px, 14px, 0.01em);
@@ -115,7 +117,10 @@
   }
 }
 .name {
-  top: 130px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+
   @include for-size(desktop) {
     top: 93px;
   }
@@ -141,18 +146,15 @@
 .svg {
   position: absolute;
   display: inline-block;
-  top: 17px;
+
   left: 0px;
   padding: 10px;
   fill: $black;
   z-index: 5;
 }
 .modal-input {
-  position: absolute;
-  display: block;
-  margin-top: 4px;
   padding-left: 40px;
-  width: 370px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -185,25 +187,19 @@
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-checkbox {
-  position: absolute;
+  margin-bottom: 30px;
   display: inline-flex;
   align-items: center;
-  left: 67px;
-  bottom: 110px;
   font-family: $main-font, sans-serif;
   font-style: normal;
   @include fonts(400, 12px, 1.71, 0.03em);
   color: $main-text;
   @include for-size(desktop) {
     @include fonts(400, 14px, 1.71, 0.03em);
-    bottom: 120px;
-    left: 77px;
   }
 }
 
 .check-box {
-  position: absolute;
-  left: -28px;
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -245,9 +241,8 @@
   }
 }
 .btn-submit {
-  position: absolute;
-  left: 135px;
-  bottom: 40px;
+  display: block;
+  margin: 0 auto;
   width: 200px;
   height: 50px;
   font-family: $main-font, sans-serif;
@@ -267,4 +262,7 @@
     transition-duration: $time;
     transition-timing-function: $timing-function;
   }
+}
+.stop-scroll {
+  overflow: hidden;
 }
