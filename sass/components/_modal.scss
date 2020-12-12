@@ -116,33 +116,12 @@
     outline: transparent;
   }
 }
-.name {
+.element {
   position: absolute;
   top: -15px;
   left: 0;
+}
 
-  @include for-size(desktop) {
-    top: 93px;
-  }
-}
-.phone {
-  top: 198px;
-  @include for-size(desktop) {
-    top: 161px;
-  }
-}
-.mail {
-  top: 266px;
-  @include for-size(desktop) {
-    top: 229px;
-  }
-}
-.message {
-  top: 334px;
-  @include for-size(desktop) {
-    top: 297px;
-  }
-}
 .svg {
   position: absolute;
   display: inline-block;
@@ -159,9 +138,6 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  @include for-size(desktop) {
-    width: 448px;
-  }
 
   &:hover {
     cursor: pointer;

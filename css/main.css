@@ -61,7 +61,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px solid tomato;
 }
 
 h1,
@@ -426,46 +425,10 @@ ul {
   outline: transparent;
 }
 
-.name {
+.element {
   position: absolute;
   top: -15px;
   left: 0;
-}
-
-@media (min-width: 1200px) {
-  .name {
-    top: 93px;
-  }
-}
-
-.phone {
-  top: 198px;
-}
-
-@media (min-width: 1200px) {
-  .phone {
-    top: 161px;
-  }
-}
-
-.mail {
-  top: 266px;
-}
-
-@media (min-width: 1200px) {
-  .mail {
-    top: 229px;
-  }
-}
-
-.message {
-  top: 334px;
-}
-
-@media (min-width: 1200px) {
-  .message {
-    top: 297px;
-  }
 }
 
 .svg {
@@ -484,12 +447,6 @@ ul {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-}
-
-@media (min-width: 1200px) {
-  .modal-input {
-    width: 448px;
-  }
 }
 
 .modal-input:hover {
