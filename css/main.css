@@ -1196,7 +1196,7 @@ ul {
   border-radius: 4px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .client-link {
     min-width: 210px;
     flex-basis: calc(100% / 2 - 30px);
@@ -1205,7 +1205,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .client-link {
     width: 226px;
     flex-basis: calc(100% / 3 - 30px);
