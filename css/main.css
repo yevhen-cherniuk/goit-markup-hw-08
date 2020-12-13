@@ -1109,7 +1109,7 @@ ul {
   margin-bottom: 0px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list {
     display: flex;
     flex-wrap: wrap;
@@ -1117,7 +1117,7 @@ ul {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-width: 768px) {
   .team-item {
     width: calc(100% / 2 - 30px);
     margin-bottom: 30px;
