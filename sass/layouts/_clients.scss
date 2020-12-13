@@ -24,8 +24,8 @@
     flex-basis: calc(100% / 2 - 30px);
     margin-right: 5px;
     margin-left: 10px;
-    &:nth-child(2n) {
-      margin-right: 0px;
+    // &:nth-child(2n) {
+    //   margin-right: 0px;
     }
   }
   @media screen and(min-width:768px) and(max-width:1199px) {
@@ -33,9 +33,9 @@
     flex-basis: calc(100% / 3 - 30px);
     margin-right: 10px;
     margin-left: 10px;
-    &:nth-child(3n) {
-      margin-right: 0px;
-    }
+    // &:nth-child(3n) {
+    //   margin-right: 0px;
+    // }
   }
 
   @include for-size(desktop) {

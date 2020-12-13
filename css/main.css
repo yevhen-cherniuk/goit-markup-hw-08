@@ -1214,9 +1214,6 @@ ul {
     margin-right: 10px;
     margin-left: 10px;
   }
-  .client-link:nth-child(3n) {
-    margin-right: 0px;
-  }
 }
 
 @media (min-width: 1200px) {
