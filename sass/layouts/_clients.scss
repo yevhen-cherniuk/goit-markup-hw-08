@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  // @media screen and(max-width: 479px) {
+  //   display: block;
+  //   justify-content: center;
+  // }
   @include for-size(desktop) {
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -26,8 +30,8 @@
     margin-left: 10px;
     // &:nth-child(2n) {
     //   margin-right: 0px;
-    }
   }
+
   @media screen and(min-width:768px) and(max-width:1199px) {
     width: 226px;
     flex-basis: calc(100% / 3 - 30px);
